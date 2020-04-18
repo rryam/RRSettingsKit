@@ -2,8 +2,7 @@
 
 A beautiful settings screen created in SwiftUI
 
-<img src="add link here" width="300">
-<img src="add link here" width="300">
+<img src="https://github.com/rudrankriyam/SwiftUI-Settings-Screen/blob/master/Screenshot%201.png" width="500"><img src="https://github.com/rudrankriyam/SwiftUI-Settings-Screen/blob/master/Screenshot%202.png" width="500">
 
 ## Features
 - \[x]  Customizable
