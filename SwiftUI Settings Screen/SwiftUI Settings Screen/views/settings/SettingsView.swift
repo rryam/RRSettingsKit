@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import MessageUI
 
 struct SettingsView: View {
     @ObservedObject var settingsViewModel = SettingsViewModel()
@@ -51,33 +52,43 @@ struct SettingsView: View {
                     .alert(isPresented: $settingsViewModel.showMailFeatureAlert) {
                         Alert(title: Text("No Mail Accounts"), message: Text("Please set up a Mail account in order to send email"), dismissButton: .default(Text("OK")))
                     }
-                    .sheet(isPresented: $settingsViewModel.$showingFeatureEmail) {
-                        MailView(isShowing: $settingsViewModel.$showingFeatureEmail, result: $settingsViewModel.featureResult, subject: "Feature request! [Gradient Game]", message: "Hello, I have this idea ")
+                    .sheet(isPresented: $settingsViewModel.showingFeatureEmail) {
+                        MailView(isShowing: self.$settingsViewModel.showingFeatureEmail, result: self.$settingsViewModel.featureResult, subject: "Feature request! [Gradient Game]", message: "Hello, I have this idea ")
                     }
 
                     // MARK: - REPORT A BUG
                     SettingsRow(imageName: "tornado", title: "Report a bug") {
                         if MFMailComposeViewController.canSendMail() {
                             self.settingsViewModel.showingBugEmail.toggle()
-                        } else if let emailUrl = self.settingsViewModel.createEmailUrl(to: String.email, subject: "BUG! [Gradient Game]", body: "Oh no, there's a bug ") {
+                        } else if let emailUrl = self.settingsViewModel.createEmailUrl(to: Settings.email, subject: "BUG! [Gradient Game]", body: "Oh no, there's a bug ") {
                             UIApplication.shared.open(emailUrl)
                         } else {
                             self.settingsViewModel.showMailBugAlert = true
                         }
                     }
-                    .alert(isPresented: $settingsViewModel.showMailBugAlert) {
+                    .alert(isPresented: self.$settingsViewModel.showMailBugAlert) {
                         Alert(title: Text("No Mail Accounts"), message: Text("Please set up a Mail account in order to send email"), dismissButton: .default(Text("OK")))
                     }
-                    .sheet(isPresented: $settingsViewModel.$showingBugEmail) {
-                        MailView(isShowing: $settingsViewModel.$showingBugEmail, result: $settingsViewModel.$bugResult, subject: "BUG!", message: "Oh no, there's a bug ")
+                    .sheet(isPresented: $settingsViewModel.showingBugEmail) {
+                        MailView(isShowing: self.$settingsViewModel.showingBugEmail, result: self.$settingsViewModel.bugResult, subject: "BUG!", message: "Oh no, there's a bug ")
                     }
 
                     // MARK: - APP VERSION
-                    AppVersionRow(imageName: "info.circle", title: "App version", version: settingsViewModel.appversion)
+                    AppVersionRow(imageName: "info.circle", title: "App version", version: settingsViewModel.appVersion)
                 }
                 .settingsBackground()
+
+                VStack(alignment: .leading) {
+                    // MARK: - PERSONAL TWITTER ACCOUNT
+                    SettingsRow(imageName: "textbox", title: "Creator") {
+                        self.settingsViewModel.openTwitter(twitterURLApp: Settings.personalTwitterApp, twitterURLWeb: Settings.personalTwitterWeb)
+                    }
+                }
+                .settingsBackground()
+                AboutView(title: "MADE WITH ❤️ BY RUDRANK RIYAM", accessibilityTitle: "MADE WITH LOVE BY RUDRANK RIYAM")
             }
             .navigationBarTitle("Settings")
+            .padding(.top)
         }
     }
 }
