@@ -23,6 +23,7 @@ struct SettingsRow: View {
                     .font(.headline)
                     .foregroundColor(.purple)
                     .frame(minWidth: 25, alignment: .leading)
+                    .accessibility(hidden: true)
                 Text(title)
                     .kerning(1)
                 Spacer()

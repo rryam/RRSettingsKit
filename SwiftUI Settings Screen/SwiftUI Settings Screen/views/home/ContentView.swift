@@ -10,10 +10,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            Text("Hello, World!")
-                .navigationBarTitle("Example Screen")
+        TabView {
+            NavigationView {
+                Text("Hello, World!")
+                    .navigationBarTitle("Example Screen")
+            }
+
+            .tabItem {
+                Image(systemName: "house")
+                    .font(.system(size: 20))
+                Text("Home")
+            }
+            .tag(1)
+            SettingsView()
+
+                .tabItem {
+                    Image(systemName: "gear")
+                        .font(.system(size: 20))
+                    Text("Settings")
+            }
+            .tag(2)
         }
+        .accentColor(.purple)
     }
 }
 
