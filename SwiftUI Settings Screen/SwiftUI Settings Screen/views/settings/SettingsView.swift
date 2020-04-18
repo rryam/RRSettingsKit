@@ -88,7 +88,6 @@ struct SettingsView: View {
                 AboutView(title: "MADE WITH ❤️ BY RUDRANK RIYAM", accessibilityTitle: "MADE WITH LOVE BY RUDRANK RIYAM")
             }
             .navigationBarTitle("Settings")
-            .padding(.top)
         }
     }
 }
