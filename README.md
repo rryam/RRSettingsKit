@@ -2,13 +2,16 @@
 
 A beautiful settings screen created in SwiftUI
 
+<img src="add link here" width="300">
+<img src="add link here" width="300">
+
 ## Features
 - \[x]  Customizable
 - \[x]  iOS compatibility
 - \[x]  Landscape compatibility
 - \[x] iPad compatibility
 - \[x] Dark mode
-- \[ ] Mac compatibility
+- \[ ] Mac compatibility [Share Sheet not working]
 
 ## Support
 - iOS 13.0+ / macOS 10.15+
@@ -29,7 +32,8 @@ Each section is embedded in a VStack, with a custom background modifier.
 
 For example, this section is for showing a personal Twitter account.
 
-```Swift  VStack(alignment: .leading) {
+```Swift  
+VStack(alignment: .leading) {
     SettingsRow(imageName: "textbox", title: "Creator") {
         self.settingsViewModel.openTwitter(twitterURLApp: Settings.personalTwitterApp, twitterURLWeb: Settings.personalTwitterWeb)
     }

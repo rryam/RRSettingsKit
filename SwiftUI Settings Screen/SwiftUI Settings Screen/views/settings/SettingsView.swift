@@ -78,7 +78,7 @@ struct SettingsView: View {
                 }
                 .settingsBackground()
 
-                VStack(alignment: .leading) {
+                VStack {
                     // MARK: - PERSONAL TWITTER ACCOUNT
                     SettingsRow(imageName: "textbox", title: "Creator") {
                         self.settingsViewModel.openTwitter(twitterURLApp: Settings.personalTwitterApp, twitterURLWeb: Settings.personalTwitterWeb)
