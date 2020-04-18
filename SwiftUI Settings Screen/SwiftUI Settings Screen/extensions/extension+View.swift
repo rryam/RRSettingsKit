@@ -16,5 +16,6 @@ extension View {
             .background(RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .fill(Color(.secondarySystemBackground)))
             .padding(.bottom, 6)
+            .padding(.horizontal)
     }
 }
