@@ -17,6 +17,7 @@ class SettingsViewModel: ObservableObject {
     @Published var showMailBugAlert = false
     @Published var showMailFeatureAlert = false
     @Published var showShareSheet = false
+    let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
 
     func createEmailUrl(to: String, subject: String, body: String) -> URL? {
         let subjectEncoded = subject.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!

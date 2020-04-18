@@ -16,7 +16,7 @@ struct SettingsView: View {
             ScrollView {
                 AboutView(title: "💜 the game? share!", accessibilityTitle: "Love the game? share!")
 
-                VStack(alignment: .leading) {
+                VStack {
                     // MARK: - SHARE
                     SettingsRow(imageName: "square.and.arrow.up", title: "Share") {
                         self.settingsViewModel.showShareSheet = true
@@ -37,6 +37,45 @@ struct SettingsView: View {
                 }
                 .settingsBackground()
 
+                VStack {
+                    // MARK: - FEATURE REQUEST
+                    SettingsRow(imageName: "wand.and.stars", title: "Feature request") {
+                        if MFMailComposeViewController.canSendMail() {
+                            self.settingsViewModel.showingFeatureEmail.toggle()
+                        } else if let emailUrl = self.settingsViewModel.createEmailUrl(to: Settings.email, subject: "Feature request!", body: "Hello, I have this idea ") {
+                            UIApplication.shared.open(emailUrl)
+                        } else {
+                            self.settingsViewModel.showMailFeatureAlert = true
+                        }
+                    }
+                    .alert(isPresented: $settingsViewModel.showMailFeatureAlert) {
+                        Alert(title: Text("No Mail Accounts"), message: Text("Please set up a Mail account in order to send email"), dismissButton: .default(Text("OK")))
+                    }
+                    .sheet(isPresented: $settingsViewModel.$showingFeatureEmail) {
+                        MailView(isShowing: $settingsViewModel.$showingFeatureEmail, result: $settingsViewModel.featureResult, subject: "Feature request! [Gradient Game]", message: "Hello, I have this idea ")
+                    }
+
+                    // MARK: - REPORT A BUG
+                    SettingsRow(imageName: "tornado", title: "Report a bug") {
+                        if MFMailComposeViewController.canSendMail() {
+                            self.settingsViewModel.showingBugEmail.toggle()
+                        } else if let emailUrl = self.settingsViewModel.createEmailUrl(to: String.email, subject: "BUG! [Gradient Game]", body: "Oh no, there's a bug ") {
+                            UIApplication.shared.open(emailUrl)
+                        } else {
+                            self.settingsViewModel.showMailBugAlert = true
+                        }
+                    }
+                    .alert(isPresented: $settingsViewModel.showMailBugAlert) {
+                        Alert(title: Text("No Mail Accounts"), message: Text("Please set up a Mail account in order to send email"), dismissButton: .default(Text("OK")))
+                    }
+                    .sheet(isPresented: $settingsViewModel.$showingBugEmail) {
+                        MailView(isShowing: $settingsViewModel.$showingBugEmail, result: $settingsViewModel.$bugResult, subject: "BUG!", message: "Oh no, there's a bug ")
+                    }
+
+                    // MARK: - APP VERSION
+                    AppVersionRow(imageName: "info.circle", title: "App version", version: settingsViewModel.appversion)
+                }
+                .settingsBackground()
             }
             .navigationBarTitle("Settings")
         }
