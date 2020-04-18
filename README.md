@@ -1,6 +1,6 @@
 # SwiftUI Settings Screen
 
-A beautiful settings screen created in SwiftUI
+A beautiful settings screen created in SwiftUI. It is based on my [Gradient Game!](https://apps.apple.com/app/id1479784361)
 
 Light Mode Settings        |  Dark Mode Setting
 :-------------------------:|:-------------------------:
