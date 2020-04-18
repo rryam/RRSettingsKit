@@ -26,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A56E2CB244AD0160074F955 /* SwiftUI Settings Screen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwiftUI Settings Screen.entitlements"; sourceTree = "<group>"; };
 		0A8E806F244AB0FF00305045 /* SwiftUI Settings Screen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Settings Screen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8E8072244AB0FF00305045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A8E8074244AB0FF00305045 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		0A8E8071244AB0FF00305045 /* SwiftUI Settings Screen */ = {
 			isa = PBXGroup;
 			children = (
+				0A56E2CB244AD0160074F955 /* SwiftUI Settings Screen.entitlements */,
 				0AABA102244AC1750090CB17 /* views */,
 				0A8E8098244ABC6A00305045 /* models */,
 				0A8E8095244AB8BE00305045 /* viewModels */,
@@ -388,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SwiftUI Settings Screen/SwiftUI Settings Screen.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI Settings Screen/Preview Content\"";
 				DEVELOPMENT_TEAM = YQZQG7N4WG;
@@ -399,6 +402,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rudrankriyam.SwiftUI-Settings-Screen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -408,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SwiftUI Settings Screen/SwiftUI Settings Screen.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI Settings Screen/Preview Content\"";
 				DEVELOPMENT_TEAM = YQZQG7N4WG;
@@ -419,6 +424,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rudrankriyam.SwiftUI-Settings-Screen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

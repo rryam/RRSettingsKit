@@ -15,6 +15,7 @@ struct ContentView: View {
                 Text("Hello, World!")
                     .navigationBarTitle("Example Screen")
             }
+            .navigationViewStyle(StackNavigationViewStyle())
 
             .tabItem {
                 Image(systemName: "house")
