@@ -16,6 +16,9 @@ Light Mode Settings        |  Dark Mode Setting
 ## Support
 - iOS 13.0+ / macOS 10.15+
 
+## Future
+- Make it a Swift Package 
+
 ##  Documentation
 
 Individual rows is the SettingsRow View which takes the image, title and action as the parameter. You can customise it to your liking.  
