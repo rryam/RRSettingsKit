@@ -23,7 +23,7 @@ struct SettingsView: View {
                         self.settingsViewModel.showShareSheet = true
                     }
                     .sheet(isPresented: $settingsViewModel.showShareSheet) {
-                        ShareSheetView(activityItems: ["Can you beat me in Gradient Game? \n\(Settings.appURL)", self.settingsViewModel.shareScreen()!])
+                        ShareSheetView(activityItems: ["Can you beat me in Gradient Game? \n\(Settings.appURL)"])
                             .edgesIgnoringSafeArea(.bottom)
                     }
                     // MARK: - WRITE REVIEW

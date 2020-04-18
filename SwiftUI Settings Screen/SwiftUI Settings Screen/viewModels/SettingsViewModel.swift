@@ -51,13 +51,4 @@ class SettingsViewModel: ObservableObject {
         guard let writeReviewURL = components?.url else { return }
         UIApplication.shared.open(writeReviewURL)
     }
-
-    func shareScreen() -> UIImage? {
-        let bounds = UIScreen.main.bounds
-        UIGraphicsBeginImageContextWithOptions(bounds.size, true, 0.0)
-        UIApplication.shared.windows[0].rootViewController?.view.drawHierarchy(in: bounds, afterScreenUpdates: false)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image
-    }
 }

@@ -396,6 +396,7 @@
 				DEVELOPMENT_TEAM = YQZQG7N4WG;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI Settings Screen/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,6 +419,7 @@
 				DEVELOPMENT_TEAM = YQZQG7N4WG;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI Settings Screen/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
