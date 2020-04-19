@@ -83,13 +83,21 @@ struct SettingsView: View {
                     SettingsRow(imageName: "textbox", title: "Creator") {
                         self.settingsViewModel.openTwitter(twitterURLApp: Settings.personalTwitterApp, twitterURLWeb: Settings.personalTwitterWeb)
                     }
+
+                    // MARK: - CREDITS
+                    SettingsRow(imageName: "hand.thumbsup", title: "Credits", action: {
+                        self.settingsViewModel.showCreditsView = true
+                    })
+                        .sheet(isPresented: $settingsViewModel.showCreditsView) {
+                            CreditsView()
+                    }
                 }
                 .settingsBackground()
                 AboutView(title: "MADE WITH ❤️ BY RUDRANK RIYAM", accessibilityTitle: "MADE WITH LOVE BY RUDRANK RIYAM")
             }
             .navigationBarTitle("Settings")
         }
-    .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

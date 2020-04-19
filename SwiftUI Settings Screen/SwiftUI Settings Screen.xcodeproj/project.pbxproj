@@ -20,6 +20,7 @@
 		0A8E8094244AB6B000305045 /* extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E8093244AB6B000305045 /* extension+View.swift */; };
 		0A8E8097244AB8D200305045 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E8096244AB8D200305045 /* SettingsViewModel.swift */; };
 		0A8E809A244ABC7300305045 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E8099244ABC7300305045 /* Settings.swift */; };
+		0AA7E334244C79F8001988C4 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7E333244C79F8001988C4 /* CreditsView.swift */; };
 		0AABA101244AC04B0090CB17 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABA100244AC04B0090CB17 /* ShareSheetView.swift */; };
 		0AABA104244AC69A0090CB17 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABA103244AC69A0090CB17 /* MailView.swift */; };
 		0AABA106244AC7290090CB17 /* AppVersionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABA105244AC7290090CB17 /* AppVersionRow.swift */; };
@@ -43,6 +44,7 @@
 		0A8E8093244AB6B000305045 /* extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+View.swift"; sourceTree = "<group>"; };
 		0A8E8096244AB8D200305045 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		0A8E8099244ABC7300305045 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		0AA7E333244C79F8001988C4 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		0AABA100244AC04B0090CB17 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
 		0AABA103244AC69A0090CB17 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		0AABA105244AC7290090CB17 /* AppVersionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionRow.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				0A8E8088244AB1AC00305045 /* AboutView.swift */,
 				0A8E808A244AB34900305045 /* SettingsRow.swift */,
 				0AABA100244AC04B0090CB17 /* ShareSheetView.swift */,
+				0AA7E333244C79F8001988C4 /* CreditsView.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8E8073244AB0FF00305045 /* AppDelegate.swift in Sources */,
+				0AA7E334244C79F8001988C4 /* CreditsView.swift in Sources */,
 				0A8E8087244AB1A500305045 /* SettingsView.swift in Sources */,
 				0A8E8094244AB6B000305045 /* extension+View.swift in Sources */,
 				0A8E808D244AB5F700305045 /* FeedbackManager.swift in Sources */,
