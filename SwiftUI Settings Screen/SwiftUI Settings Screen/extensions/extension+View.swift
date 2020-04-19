@@ -18,4 +18,12 @@ extension View {
             .padding(.bottom, 6)
             .padding(.horizontal)
     }
+
+    func customHoverEffect() -> some View {
+        if #available(macCatalyst 13.4, *), #available(iOS 13.4, *) {
+            return AnyView(self.hoverEffect())
+        } else {
+            return AnyView(self)
+        }
+    }
 }

@@ -32,6 +32,7 @@ struct SettingsRow: View {
             .padding(.vertical, 10)
             .foregroundColor(.primary)
         }
+        .customHoverEffect()
     }
 }
 

@@ -23,6 +23,7 @@
 		0AABA101244AC04B0090CB17 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABA100244AC04B0090CB17 /* ShareSheetView.swift */; };
 		0AABA104244AC69A0090CB17 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABA103244AC69A0090CB17 /* MailView.swift */; };
 		0AABA106244AC7290090CB17 /* AppVersionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABA105244AC7290090CB17 /* AppVersionRow.swift */; };
+		0ABBD3FD244C0AAB00D7ABA6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABBD3FC244C0AAB00D7ABA6 /* SwiftUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		0AABA100244AC04B0090CB17 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
 		0AABA103244AC69A0090CB17 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		0AABA105244AC7290090CB17 /* AppVersionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionRow.swift; sourceTree = "<group>"; };
+		0ABBD3FC244C0AAB00D7ABA6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ABBD3FD244C0AAB00D7ABA6 /* SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 			children = (
 				0A8E8071244AB0FF00305045 /* SwiftUI Settings Screen */,
 				0A8E8070244AB0FF00305045 /* Products */,
+				0ABBD3FB244C0AAB00D7ABA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +173,14 @@
 				0A8E8091244AB65400305045 /* home */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		0ABBD3FB244C0AAB00D7ABA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0ABBD3FC244C0AAB00D7ABA6 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -5,12 +5,14 @@ A beautiful settings screen created in SwiftUI. It is based on my [Gradient Game
 Light Mode Settings        |  Dark Mode Setting
 :-------------------------:|:-------------------------:
 <img src="https://github.com/rudrankriyam/SwiftUI-Settings-Screen/blob/master/Screenshot%201.png" width="500">  | <img src="https://github.com/rudrankriyam/SwiftUI-Settings-Screen/blob/master/Screenshot%202.png" width="500">
+
 ## Features
 - \[x]  Customizable
 - \[x]  iOS compatibility
 - \[x]  Landscape compatibility
 - \[x] iPad compatibility
 - \[x] Dark mode
+- \[x] Hover Effect for iPad
 - \[ ] Mac compatibility [Share Sheet not working]
 
 ## Support
