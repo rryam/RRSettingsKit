@@ -39,7 +39,7 @@ struct MailView: UIViewControllerRepresentable {
         return Coordinator(isShowing: $isShowing, result: $result)
     }
 
-    func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
+    func makeUIViewController(context: Context) -> MFMailComposeViewController {
         let mailViewController = MFMailComposeViewController()
         mailViewController.setToRecipients([recipientEmail])
         mailViewController.setSubject(subject)
@@ -48,7 +48,7 @@ struct MailView: UIViewControllerRepresentable {
         return mailViewController
     }
 
-    func updateUIViewController(_ uiViewController: MFMailComposeViewController, context: UIViewControllerRepresentableContext<MailView>) {
+    func updateUIViewController(_ uiViewController: MFMailComposeViewController, context: Context) {
     }
 }
 
