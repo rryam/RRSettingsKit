@@ -14,16 +14,6 @@
 		0A8E807C244AB10100305045 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E807B244AB10100305045 /* Preview Assets.xcassets */; };
 		0A8E807F244AB10100305045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E807D244AB10100305045 /* LaunchScreen.storyboard */; };
 		0A8E8087244AB1A500305045 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E8086244AB1A500305045 /* SettingsView.swift */; };
-		0A8E8089244AB1AC00305045 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E8088244AB1AC00305045 /* AboutView.swift */; };
-		0A8E808B244AB34900305045 /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E808A244AB34900305045 /* SettingsRow.swift */; };
-		0A8E808D244AB5F700305045 /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E808C244AB5F700305045 /* FeedbackManager.swift */; };
-		0A8E8094244AB6B000305045 /* extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E8093244AB6B000305045 /* extension+View.swift */; };
-		0A8E8097244AB8D200305045 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E8096244AB8D200305045 /* SettingsViewModel.swift */; };
-		0A8E809A244ABC7300305045 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E8099244ABC7300305045 /* Settings.swift */; };
-		0AA7E334244C79F8001988C4 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA7E333244C79F8001988C4 /* CreditsView.swift */; };
-		0AABA101244AC04B0090CB17 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABA100244AC04B0090CB17 /* ShareSheetView.swift */; };
-		0AABA104244AC69A0090CB17 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABA103244AC69A0090CB17 /* MailView.swift */; };
-		0AABA106244AC7290090CB17 /* AppVersionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABA105244AC7290090CB17 /* AppVersionRow.swift */; };
 		0ABBD3FD244C0AAB00D7ABA6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ABBD3FC244C0AAB00D7ABA6 /* SwiftUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -38,16 +28,6 @@
 		0A8E807E244AB10100305045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A8E8080244AB10100305045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A8E8086244AB1A500305045 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		0A8E8088244AB1AC00305045 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
-		0A8E808A244AB34900305045 /* SettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
-		0A8E808C244AB5F700305045 /* FeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackManager.swift; sourceTree = "<group>"; };
-		0A8E8093244AB6B000305045 /* extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension+View.swift"; sourceTree = "<group>"; };
-		0A8E8096244AB8D200305045 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		0A8E8099244ABC7300305045 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		0AA7E333244C79F8001988C4 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
-		0AABA100244AC04B0090CB17 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
-		0AABA103244AC69A0090CB17 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
-		0AABA105244AC7290090CB17 /* AppVersionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionRow.swift; sourceTree = "<group>"; };
 		0ABBD3FC244C0AAB00D7ABA6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -84,12 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				0A56E2CB244AD0160074F955 /* SwiftUI Settings Screen.entitlements */,
-				0AABA102244AC1750090CB17 /* views */,
-				0A8E8098244ABC6A00305045 /* models */,
-				0A8E8095244AB8BE00305045 /* viewModels */,
-				0A8E8092244AB66E00305045 /* managers */,
-				0A8E8090244AB64D00305045 /* extensions */,
-				0A8E808F244AB63800305045 /* support */,
+				0A8E8086244AB1A500305045 /* SettingsView.swift */,
+				0A8E8076244AB0FF00305045 /* ContentView.swift */,
+				0A8E8072244AB0FF00305045 /* AppDelegate.swift */,
+				0A8E8074244AB0FF00305045 /* SceneDelegate.swift */,
 				0A8E8078244AB10100305045 /* Assets.xcassets */,
 				0A8E807D244AB10100305045 /* LaunchScreen.storyboard */,
 				0A8E8080244AB10100305045 /* Info.plist */,
@@ -104,78 +82,6 @@
 				0A8E807B244AB10100305045 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		0A8E808E244AB62F00305045 /* settings */ = {
-			isa = PBXGroup;
-			children = (
-				0A8E8086244AB1A500305045 /* SettingsView.swift */,
-				0AABA103244AC69A0090CB17 /* MailView.swift */,
-				0AABA105244AC7290090CB17 /* AppVersionRow.swift */,
-				0A8E8088244AB1AC00305045 /* AboutView.swift */,
-				0A8E808A244AB34900305045 /* SettingsRow.swift */,
-				0AABA100244AC04B0090CB17 /* ShareSheetView.swift */,
-				0AA7E333244C79F8001988C4 /* CreditsView.swift */,
-			);
-			path = settings;
-			sourceTree = "<group>";
-		};
-		0A8E808F244AB63800305045 /* support */ = {
-			isa = PBXGroup;
-			children = (
-				0A8E8072244AB0FF00305045 /* AppDelegate.swift */,
-				0A8E8074244AB0FF00305045 /* SceneDelegate.swift */,
-			);
-			path = support;
-			sourceTree = "<group>";
-		};
-		0A8E8090244AB64D00305045 /* extensions */ = {
-			isa = PBXGroup;
-			children = (
-				0A8E8093244AB6B000305045 /* extension+View.swift */,
-			);
-			path = extensions;
-			sourceTree = "<group>";
-		};
-		0A8E8091244AB65400305045 /* home */ = {
-			isa = PBXGroup;
-			children = (
-				0A8E8076244AB0FF00305045 /* ContentView.swift */,
-			);
-			path = home;
-			sourceTree = "<group>";
-		};
-		0A8E8092244AB66E00305045 /* managers */ = {
-			isa = PBXGroup;
-			children = (
-				0A8E808C244AB5F700305045 /* FeedbackManager.swift */,
-			);
-			path = managers;
-			sourceTree = "<group>";
-		};
-		0A8E8095244AB8BE00305045 /* viewModels */ = {
-			isa = PBXGroup;
-			children = (
-				0A8E8096244AB8D200305045 /* SettingsViewModel.swift */,
-			);
-			path = viewModels;
-			sourceTree = "<group>";
-		};
-		0A8E8098244ABC6A00305045 /* models */ = {
-			isa = PBXGroup;
-			children = (
-				0A8E8099244ABC7300305045 /* Settings.swift */,
-			);
-			path = models;
-			sourceTree = "<group>";
-		};
-		0AABA102244AC1750090CB17 /* views */ = {
-			isa = PBXGroup;
-			children = (
-				0A8E808E244AB62F00305045 /* settings */,
-				0A8E8091244AB65400305045 /* home */,
-			);
-			path = views;
 			sourceTree = "<group>";
 		};
 		0ABBD3FB244C0AAB00D7ABA6 /* Frameworks */ = {
@@ -258,19 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8E8073244AB0FF00305045 /* AppDelegate.swift in Sources */,
-				0AA7E334244C79F8001988C4 /* CreditsView.swift in Sources */,
 				0A8E8087244AB1A500305045 /* SettingsView.swift in Sources */,
-				0A8E8094244AB6B000305045 /* extension+View.swift in Sources */,
-				0A8E808D244AB5F700305045 /* FeedbackManager.swift in Sources */,
-				0A8E809A244ABC7300305045 /* Settings.swift in Sources */,
 				0A8E8075244AB0FF00305045 /* SceneDelegate.swift in Sources */,
-				0AABA106244AC7290090CB17 /* AppVersionRow.swift in Sources */,
-				0AABA101244AC04B0090CB17 /* ShareSheetView.swift in Sources */,
-				0AABA104244AC69A0090CB17 /* MailView.swift in Sources */,
 				0A8E8077244AB0FF00305045 /* ContentView.swift in Sources */,
-				0A8E8089244AB1AC00305045 /* AboutView.swift in Sources */,
-				0A8E808B244AB34900305045 /* SettingsRow.swift in Sources */,
-				0A8E8097244AB8D200305045 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

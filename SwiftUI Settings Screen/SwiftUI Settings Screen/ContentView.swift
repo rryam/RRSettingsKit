@@ -29,8 +29,8 @@ struct ContentView: View {
                     Image(systemName: "gear")
                         .font(.system(size: 20))
                     Text("Settings")
-            }
-            .tag(2)
+                }
+                .tag(2)
         }
         .accentColor(.purple)
     }
