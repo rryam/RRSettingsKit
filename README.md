@@ -1,51 +1,36 @@
-# SwiftUI Settings Screen
+# RRSettingsKit
 
 A beautiful settings screen created in SwiftUI. It is based on my [Gradient Game!](https://apps.apple.com/app/id1479784361)
 
-Light Mode Settings        |  Dark Mode Setting
-:-------------------------:|:-------------------------:
-<img src="https://github.com/rudrankriyam/SwiftUI-Settings-Screen/blob/master/Screenshot%201.png" width="500">  | <img src="https://github.com/rudrankriyam/SwiftUI-Settings-Screen/blob/master/Screenshot%202.png" width="500">
-
 ## Features
-- \[x]  Customizable
-- \[x]  iOS compatibility
-- \[x]  Landscape compatibility
+- \[x] Customisable
+- \[x] iOS compatibility
+- \[x] Landscape compatibility
 - \[x] iPad compatibility
 - \[x] Dark mode
-- \[x] Hover Effect for iPad
-- \[ ] Mac compatibility [Share Sheet not working]
+- \[ ] Hover Effect for iPad
+- \[ ] Mac compatibility
 
 ## Support
-- iOS 13.0+ / macOS 10.15+
+- iOS 13.0+ / macOS 10.15+ [soon]
 
-## Future
-- Make it a Swift Package 
+## Usage
 
-##  Documentation
+### SettingsRow
 
-Individual rows is the SettingsRow View which takes the image, title and action as the parameter. You can customise it to your liking.  
+It takes the image, title and action as the parameter. You can customise it to your liking.  
 
 For example, this row is for writing a review, with a function in the closure.
 
 ```Swift
-SettingsRow(imageName: "pencil.and.outline", title: "Write a review") {
+RRSettingsKit.SettingsRow(imageName: "pencil.and.outline", title: "Write a review") {
     self.settingsViewModel.writeReview()
 }
 ```
 
-Each section is embedded in a VStack, with a custom background modifier. 
+More documentation coming soon with Version 0.1.0
 
-For example, this section is for showing a personal Twitter account.
-
-```Swift  
-VStack(alignment: .leading) {
-    SettingsRow(imageName: "textbox", title: "Creator") {
-        self.settingsViewModel.openTwitter(twitterURLApp: Settings.personalTwitterApp, twitterURLWeb: Settings.personalTwitterWeb)
-    }
-}
-.settingsBackground()
-```
-##  Contribution
+## Contribution
 
 You are free to add more features to it, or refactor the code! I will be more than happy to accept PRs. 
 
