@@ -1,4 +1,4 @@
-# RRSettingsKit
+![RRSettingsKit Logo](./RRSettingsKit.png?style=centerme)
 
 A beautiful settings screen created in SwiftUI. It is based on my [Gradient Game!](https://apps.apple.com/app/id1479784361)
 
