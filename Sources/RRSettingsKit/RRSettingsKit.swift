@@ -44,7 +44,7 @@ public struct TwitterRow: View {
     }
 
     public var body: some View {
-        SettingsRow(imageName: imageName, title: title, action: {
+        SettingsActionRow(imageName: imageName, title: title, action: {
             openTwitter(appURL: twitterAppURL, webURL: twitterWebURL)
         })
     }
@@ -76,7 +76,7 @@ public struct WriteReviewRow: View {
     }
 
     public var body: some View {
-        SettingsRow(imageName: imageName, title: title, action: {
+        SettingsActionRow(imageName: imageName, title: title, action: {
             writeReview(appURL: appURL)
         })
     }
@@ -116,37 +116,6 @@ public struct AppVersionRow: View {
         .accessibilityElement(children: .combine)
         .padding(.vertical, 10)
         .settingsBackground()
-    }
-}
-
-public struct SettingsRow: View {
-    var imageName: String
-    var title: String
-    var action: () -> ()
-
-    /// A generic settings row which can be customised according to your needs.
-    /// - Parameters:
-    ///   - imageName: The icon for the settings row.
-    ///   - title: The title of the settings row.
-    ///   - action: The custom action that you want to perform on tapping the row.
-    public init(imageName: String, title: String, action: @escaping () -> ()) {
-        self.imageName = imageName
-        self.title = title
-        self.action = action
-    }
-
-    public var body: some View {
-        Button(action: action) {
-            HStack(spacing: 8) {
-                Image(systemName: imageName).customIconImage()
-                Text(title).kerning(1)
-                Spacer()
-                Image(systemName: "chevron.right")
-            }
-            .padding(.vertical, 10)
-            .settingsBackground()
-        }
-        .buttonStyle(PlainButtonStyle())
     }
 }
 

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -21,6 +21,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0A43200D2611D44700BF1EF9 /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A43200C2611D44700BF1EF9 /* SettingsRow.swift */; };
+		0A4320202611DB8200BF1EF9 /* RRComponentsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A43201F2611DB8200BF1EF9 /* RRComponentsKit */; };
+		0A4320212611DB8200BF1EF9 /* RRComponentsKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0A43201F2611DB8200BF1EF9 /* RRComponentsKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0A71C4D12533AACF00D0E65F /* RRSettingsKitExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71C4D02533AACF00D0E65F /* RRSettingsKitExampleApp.swift */; };
 		0A71C4D32533AACF00D0E65F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71C4D22533AACF00D0E65F /* ContentView.swift */; };
 		0A71C4D52533AAD000D0E65F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A71C4D42533AAD000D0E65F /* Assets.xcassets */; };
@@ -49,7 +52,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0A4320072611D42A00BF1EF9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0A4320212611DB8200BF1EF9 /* RRComponentsKit in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0A43200C2611D44700BF1EF9 /* SettingsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
 		0A71C4CE2533AACF00D0E65F /* RRSettingsKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RRSettingsKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A71C4D02533AACF00D0E65F /* RRSettingsKitExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRSettingsKitExampleApp.swift; sourceTree = "<group>"; };
 		0A71C4D22533AACF00D0E65F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				0A4320202611DB8200BF1EF9 /* RRComponentsKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +110,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A43201E2611DB8200BF1EF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0A71C4CF2533AACF00D0E65F /* RRSettingsKitExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +174,7 @@
 				0A71C4CF2533AACF00D0E65F /* RRSettingsKitExample */,
 				OBJ_14 /* Products */,
 				OBJ_17 /* README.md */,
+				0A43201E2611DB8200BF1EF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* RRSettingsKit.swift */,
+				0A43200C2611D44700BF1EF9 /* SettingsRow.swift */,
 			);
 			name = RRSettingsKit;
 			path = Sources/RRSettingsKit;
@@ -194,12 +222,16 @@
 			buildPhases = (
 				OBJ_22 /* Sources */,
 				OBJ_24 /* Frameworks */,
+				0A4320072611D42A00BF1EF9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = RRSettingsKit;
+			packageProductDependencies = (
+				0A43201F2611DB8200BF1EF9 /* RRComponentsKit */,
+			);
 			productName = RRSettingsKit;
 			productReference = "RRSettingsKit::RRSettingsKit::Product" /* RRSettingsKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -259,6 +291,9 @@
 				en,
 			);
 			mainGroup = OBJ_5;
+			packageReferences = (
+				0A4320032611D42A00BF1EF9 /* XCRemoteSwiftPackageReference "RRComponentsKit" */,
+			);
 			productRefGroup = OBJ_14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -299,6 +334,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_23 /* RRSettingsKit.swift in Sources */,
+				0A43200D2611D44700BF1EF9 /* SettingsRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +425,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = RRSettingsKitExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rudrankriyam.RRSettingsKitExample;
@@ -451,7 +490,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = RRSettingsKitExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rudrankriyam.RRSettingsKitExample;
@@ -473,8 +515,11 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = RRSettingsKit.xcodeproj/RRSettingsKit_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0.1;
 				OTHER_CFLAGS = "$(inherited)";
@@ -502,8 +547,11 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = RRSettingsKit.xcodeproj/RRSettingsKit_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0.1;
 				OTHER_CFLAGS = "$(inherited)";
@@ -593,7 +641,11 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = RRSettingsKit.xcodeproj/RRSettingsKitTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -618,7 +670,11 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = RRSettingsKit.xcodeproj/RRSettingsKitTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -651,7 +707,8 @@
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
@@ -714,6 +771,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0A4320032611D42A00BF1EF9 /* XCRemoteSwiftPackageReference "RRComponentsKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rudrankriyam/RRComponentsKit.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A43201F2611DB8200BF1EF9 /* RRComponentsKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A4320032611D42A00BF1EF9 /* XCRemoteSwiftPackageReference "RRComponentsKit" */;
+			productName = RRComponentsKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }
