@@ -24,6 +24,8 @@
 		0A43200D2611D44700BF1EF9 /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A43200C2611D44700BF1EF9 /* SettingsRow.swift */; };
 		0A4320202611DB8200BF1EF9 /* RRComponentsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A43201F2611DB8200BF1EF9 /* RRComponentsKit */; };
 		0A4320212611DB8200BF1EF9 /* RRComponentsKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0A43201F2611DB8200BF1EF9 /* RRComponentsKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0A4320AC2611DDBE00BF1EF9 /* RRSettingsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "RRSettingsKit::RRSettingsKit::Product" /* RRSettingsKit.framework */; };
+		0A4320AD2611DDBE00BF1EF9 /* RRSettingsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "RRSettingsKit::RRSettingsKit::Product" /* RRSettingsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0A71C4D12533AACF00D0E65F /* RRSettingsKitExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71C4D02533AACF00D0E65F /* RRSettingsKitExampleApp.swift */; };
 		0A71C4D32533AACF00D0E65F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71C4D22533AACF00D0E65F /* ContentView.swift */; };
 		0A71C4D52533AAD000D0E65F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A71C4D42533AAD000D0E65F /* Assets.xcassets */; };
@@ -36,6 +38,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0A4320AE2611DDBE00BF1EF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "RRSettingsKit::RRSettingsKit";
+			remoteInfo = RRSettingsKit;
+		};
 		0A71C4C52533A04900D0E65F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -64,6 +73,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A4320B02611DDBE00BF1EF9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0A4320AD2611DDBE00BF1EF9 /* RRSettingsKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A4320AC2611DDBE00BF1EF9 /* RRSettingsKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,10 +227,12 @@
 				0A71C4CA2533AACF00D0E65F /* Sources */,
 				0A71C4CB2533AACF00D0E65F /* Frameworks */,
 				0A71C4CC2533AACF00D0E65F /* Resources */,
+				0A4320B02611DDBE00BF1EF9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0A4320AF2611DDBE00BF1EF9 /* PBXTargetDependency */,
 			);
 			name = RRSettingsKitExample;
 			productName = RRSettingsKitExample;
@@ -358,6 +381,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0A4320AF2611DDBE00BF1EF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "RRSettingsKit::RRSettingsKit" /* RRSettingsKit */;
+			targetProxy = 0A4320AE2611DDBE00BF1EF9 /* PBXContainerItemProxy */;
+		};
 		OBJ_35 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "RRSettingsKit::RRSettingsKitTests" /* RRSettingsKitTests */;
@@ -424,7 +452,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = RRSettingsKitExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,7 +517,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = RRSettingsKitExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
