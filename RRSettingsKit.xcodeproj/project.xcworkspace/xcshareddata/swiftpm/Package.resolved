@@ -2,11 +2,20 @@
   "object": {
     "pins": [
       {
+        "package": "MovingNumbersView",
+        "repositoryURL": "https://github.com/aunnnn/MovingNumbersView.git",
+        "state": {
+          "branch": null,
+          "revision": "89dd0f149de0b89831f0bc5f6bc36daddf9a9eeb",
+          "version": "0.1.0"
+        }
+      },
+      {
         "package": "RRComponentsKit",
         "repositoryURL": "https://github.com/rudrankriyam/RRComponentsKit.git",
         "state": {
           "branch": "main",
-          "revision": "98db00216f1926367c54b3afb30514dcb45b0ef3",
+          "revision": "53afe1b8ffee8eb07980f16907c4463de932abfa",
           "version": null
         }
       }

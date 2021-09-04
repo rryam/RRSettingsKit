@@ -76,7 +76,7 @@ public struct SettingsRow: View {
     HStack(spacing: 8) {
       Image(systemName: imageName)
         .customIconImage()
-      Text(title).font()
+        Text(title).font(type: .poppins, weight: .regular, style: .body)
       Spacer()
       
       if showDisclosure {
