@@ -32,6 +32,7 @@
 		0A71C4D82533AAD000D0E65F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A71C4D72533AAD000D0E65F /* Preview Assets.xcassets */; };
 		0A8025BE26E3D9A5005AF372 /* RRComponentsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A8025BD26E3D9A5005AF372 /* RRComponentsKit */; };
 		0A8025BF26E3D9A5005AF372 /* RRComponentsKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0A8025BD26E3D9A5005AF372 /* RRComponentsKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0A8025C126E3DD9C005AF372 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8025C026E3DD9C005AF372 /* MailView.swift */; };
 		OBJ_23 /* RRSettingsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* RRSettingsKit.swift */; };
 		OBJ_30 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_41 /* RRSettingsKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* RRSettingsKitTests.swift */; };
@@ -97,6 +98,7 @@
 		0A71C4D42533AAD000D0E65F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A71C4D72533AAD000D0E65F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A71C4D92533AAD000D0E65F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A8025C026E3DD9C005AF372 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		OBJ_12 /* RRSettingsKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRSettingsKitTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_17 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			children = (
 				OBJ_9 /* RRSettingsKit.swift */,
 				0A43200C2611D44700BF1EF9 /* SettingsRow.swift */,
+				0A8025C026E3DD9C005AF372 /* MailView.swift */,
 			);
 			name = RRSettingsKit;
 			path = Sources/RRSettingsKit;
@@ -364,6 +367,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_23 /* RRSettingsKit.swift in Sources */,
+				0A8025C126E3DD9C005AF372 /* MailView.swift in Sources */,
 				0A43200D2611D44700BF1EF9 /* SettingsRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

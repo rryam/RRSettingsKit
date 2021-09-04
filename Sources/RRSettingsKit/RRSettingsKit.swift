@@ -125,6 +125,7 @@ public struct AppVersionRow: View {
     }
 }
 
+
 extension View {
     func customIconImage() -> some View {
         self
