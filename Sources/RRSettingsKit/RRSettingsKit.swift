@@ -120,19 +120,25 @@ public struct AppVersionRow: View {
 }
 
 extension View {
-    func customIconImage() -> ModifiedContent<Self, CustomImageModifier> {
-        return modifier(CustomImageModifier())
-    }
-
-    func settingsBackground(cornerRadius: CGFloat = 16, innerPadding: CGFloat = 8, outerBottomPadding: CGFloat = 6) -> some View {
-        self
-            .padding(.horizontal)
-            .padding(.vertical, innerPadding)
-            .background(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-                            .fill(Color(.secondarySystemBackground)))
-            .padding(.bottom, outerBottomPadding)
-            .padding(.horizontal)
-    }
+  func customIconImage() -> some View {
+    self
+      .font(.headline)
+      .frame(minWidth: 25, alignment: .leading)
+      .accessibility(hidden: true)
+  }
+  
+  func settingsBackground(cornerRadius: CGFloat = 16,
+                          innerPadding: CGFloat = 8,
+                          outerBottomPadding: CGFloat = 6) -> some View {
+    self
+      .padding(.horizontal)
+      .padding(.vertical, innerPadding)
+      .background(RoundedRectangle(cornerRadius: cornerRadius,
+                                   style: .continuous)
+                    .fill(Color(.secondarySystemBackground)))
+      .padding(.bottom, outerBottomPadding)
+      .padding(.horizontal)
+  }
 }
 
 struct CustomImageModifier: ViewModifier {

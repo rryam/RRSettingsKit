@@ -13,20 +13,23 @@ struct ContentView: View {
         NavigationView {
             ScrollView {
                 AboutRow(title: "💜 the game? share!", accessibilityTitle: "Love the game? share!")
+              
                 SettingsRow(imageName: "square.and.arrow.up", title: "Share")
 
                 SettingsActionRow(imageName: "square.and.arrow.up", title: "Share") {
                     // Add share action here
                 }
 
+
                 SettingsNavigationRow(imageName: "square.and.arrow.up", title: "Share", destination: ContentView())
 
-                WriteReviewRow(appURL:  "https://apps.apple.com/us/app/gradient-game/id1479784361")
+                WriteReviewRow(appURL: "https://apps.apple.com/us/app/gradient-game/id1479784361")
 
                 TwitterRow(imageName: "textbox", title: "Tweet about it", twitterAppURL: "twitter://user?screen_name=gradientsgame", twitterWebURL: "https://www.twitter.com/gradientsgame")
 
                 AppVersionRow(version: "0.1.0")
             }
+            .foregroundColor(.red)
             .navigationTitle("Settings")
         }
     }
