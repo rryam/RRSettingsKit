@@ -30,6 +30,8 @@
 		0A71C4D32533AACF00D0E65F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71C4D22533AACF00D0E65F /* ContentView.swift */; };
 		0A71C4D52533AAD000D0E65F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A71C4D42533AAD000D0E65F /* Assets.xcassets */; };
 		0A71C4D82533AAD000D0E65F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A71C4D72533AAD000D0E65F /* Preview Assets.xcassets */; };
+		0A8025BE26E3D9A5005AF372 /* RRComponentsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A8025BD26E3D9A5005AF372 /* RRComponentsKit */; };
+		0A8025BF26E3D9A5005AF372 /* RRComponentsKit in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 0A8025BD26E3D9A5005AF372 /* RRComponentsKit */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		OBJ_23 /* RRSettingsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* RRSettingsKit.swift */; };
 		OBJ_30 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_41 /* RRSettingsKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* RRSettingsKitTests.swift */; };
@@ -80,6 +82,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				0A4320AD2611DDBE00BF1EF9 /* RRSettingsKit.framework in Embed Frameworks */,
+				0A8025BF26E3D9A5005AF372 /* RRComponentsKit in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A4320AC2611DDBE00BF1EF9 /* RRSettingsKit.framework in Frameworks */,
+				0A8025BE26E3D9A5005AF372 /* RRComponentsKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +239,9 @@
 				0A4320AF2611DDBE00BF1EF9 /* PBXTargetDependency */,
 			);
 			name = RRSettingsKitExample;
+			packageProductDependencies = (
+				0A8025BD26E3D9A5005AF372 /* RRComponentsKit */,
+			);
 			productName = RRSettingsKitExample;
 			productReference = 0A71C4CE2533AACF00D0E65F /* RRSettingsKitExample.app */;
 			productType = "com.apple.product-type.application";
@@ -813,6 +820,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		0A43201F2611DB8200BF1EF9 /* RRComponentsKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A4320032611D42A00BF1EF9 /* XCRemoteSwiftPackageReference "RRComponentsKit" */;
+			productName = RRComponentsKit;
+		};
+		0A8025BD26E3D9A5005AF372 /* RRComponentsKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0A4320032611D42A00BF1EF9 /* XCRemoteSwiftPackageReference "RRComponentsKit" */;
 			productName = RRComponentsKit;

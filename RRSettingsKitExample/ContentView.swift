@@ -20,7 +20,6 @@ struct ContentView: View {
                     // Add share action here
                 }
 
-
                 SettingsNavigationRow(imageName: "square.and.arrow.up", title: "Share", destination: ContentView())
 
                 WriteReviewRow(appURL: "https://apps.apple.com/us/app/gradient-game/id1479784361")
@@ -29,7 +28,7 @@ struct ContentView: View {
 
                 AppVersionRow(version: "0.1.0")
             }
-            .foregroundColor(.red)
+            .accentColor(.red)
             .navigationTitle("Settings")
         }
     }

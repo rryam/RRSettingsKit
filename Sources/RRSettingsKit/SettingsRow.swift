@@ -9,81 +9,84 @@ import SwiftUI
 import RRComponentsKit
 
 public struct SettingsNavigationRow<Destination: View>: View {
-  private var imageName: String
-  private var title: String
-  private var destination: Destination
-  
-  /// A generic settings row which can be customised according to your needs.
-  /// - Parameters:
-  ///   - imageName: The icon for the settings row.
-  ///   - title: The title of the settings row.
-  ///   - destination: The view to navigate to, after tapping the row.
-  public init(imageName: String, title: String, destination: Destination) {
-    self.imageName = imageName
-    self.title = title
-    self.destination = destination
-  }
-  
-  public var body: some View {
-    NavigationLink(destination: destination) {
-      SettingsRow(imageName: imageName, title: title)
+    private var imageName: String
+    private var title: String
+    private var destination: Destination
+    
+    /// A generic settings row which can be customised according to your needs.
+    /// - Parameters:
+    ///   - imageName: The icon for the settings row.
+    ///   - title: The title of the settings row.
+    ///   - destination: The view to navigate to, after tapping the row.
+    public init(imageName: String, title: String, destination: Destination) {
+        self.imageName = imageName
+        self.title = title
+        self.destination = destination
     }
-    .buttonStyle(PlainButtonStyle())
-  }
+    
+    public var body: some View {
+        NavigationLink(destination: destination) {
+            SettingsRow(imageName: imageName, title: title)
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
 }
 
 public struct SettingsActionRow: View {
-  private var imageName: String
-  private var title: String
-  private var action: () -> ()
-  
-  /// A generic settings row which can be customised according to your needs.
-  /// - Parameters:
-  ///   - imageName: The icon for the settings row.
-  ///   - title: The title of the settings row.
-  ///   - action: The custom action that you want to perform on tapping the row.
-  public init(imageName: String, title: String, action: @escaping () -> ()) {
-    self.imageName = imageName
-    self.title = title
-    self.action = action
-  }
-  
-  public var body: some View {
-    Button(action: action) {
-      SettingsRow(imageName: imageName, title: title)
+    private var imageName: String
+    private var title: String
+    private var action: () -> ()
+    
+    /// A generic settings row which can be customised according to your needs.
+    /// - Parameters:
+    ///   - imageName: The icon for the settings row.
+    ///   - title: The title of the settings row.
+    ///   - action: The custom action that you want to perform on tapping the row.
+    public init(imageName: String, title: String, action: @escaping () -> ()) {
+        self.imageName = imageName
+        self.title = title
+        self.action = action
     }
-    .buttonStyle(PlainButtonStyle())
-  }
+    
+    public var body: some View {
+        Button(action: action) {
+            SettingsRow(imageName: imageName, title: title)
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
 }
 
 public struct SettingsRow: View {
-  private var imageName: String
-  private var title: String
-  private var showDisclosure: Bool
-  
-  /// A generic settings row which can be customised according to your needs.
-  /// - Parameters:
-  ///   - imageName: The icon for the settings row.
-  ///   - title: The title of the settings row.
-  ///   - showDisclosure: Show disclosure icon for action or navigation.
-  public init(imageName: String, title: String, showDisclosure: Bool = true) {
-    self.imageName = imageName
-    self.title = title
-    self.showDisclosure = showDisclosure
-  }
-  
-  public var body: some View {
-    HStack(spacing: 8) {
-      Image(systemName: imageName)
-        .customIconImage()
-        Text(title).font(type: .poppins, weight: .regular, style: .body)
-      Spacer()
-      
-      if showDisclosure {
-        Image(systemName: "chevron.right")
-      }
+    private var imageName: String
+    private var title: String
+    private var showDisclosure: Bool
+    
+    /// A generic settings row which can be customised according to your needs.
+    /// - Parameters:
+    ///   - imageName: The icon for the settings row.
+    ///   - title: The title of the settings row.
+    ///   - showDisclosure: Show disclosure icon for action or navigation.
+    public init(imageName: String, title: String, showDisclosure: Bool = true) {
+        self.imageName = imageName
+        self.title = title
+        self.showDisclosure = showDisclosure
     }
-    .padding(.vertical, 12)
-    .settingsBackground()
-  }
+    
+    public var body: some View {
+        HStack(spacing: 8) {
+            Image(systemName: imageName)
+                .customIconImage()
+            
+            Text(title)
+                .font(type: .poppins, weight: .regular, style: .body)
+            
+            Spacer()
+            
+            if showDisclosure {
+                Image(systemName: "chevron.right")
+            }
+        }
+        .padding(.vertical, 12)
+        .settingsBackground()
+    }
 }

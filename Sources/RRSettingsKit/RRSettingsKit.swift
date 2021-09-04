@@ -3,7 +3,7 @@ import SwiftUI
 public struct AboutRow: View {
     var title: String
     var accessibilityTitle: String
-
+    
     /// A view for about description.
     /// - Parameters:
     ///   - title: The title of the row. For example, the title can be "Made with ❤️ by Rudrank Riyam".
@@ -13,10 +13,10 @@ public struct AboutRow: View {
         self.title = title
         self.accessibilityTitle = accessibilityTitle
     }
-
+    
     public var body: some View {
         Text(title.uppercased())
-            .font(.caption)
+            .font(type: .poppins, weight: .regular, style: .caption1)
             .kerning(1)
             .frame(minWidth: 100, maxWidth: .infinity, alignment: .center)
             .accessibility(label: Text(accessibilityTitle))
@@ -29,7 +29,7 @@ public struct TwitterRow: View {
     var title: String
     var twitterAppURL: String
     var twitterWebURL: String
-
+    
     /// A view for making the user write a review of the app on the store.
     /// - Parameters:
     ///   - imageName: The icon for the settings row.
@@ -42,13 +42,13 @@ public struct TwitterRow: View {
         self.twitterAppURL = twitterAppURL
         self.twitterWebURL = twitterWebURL
     }
-
+    
     public var body: some View {
         SettingsActionRow(imageName: imageName, title: title, action: {
             openTwitter(appURL: twitterAppURL, webURL: twitterWebURL)
         })
     }
-
+    
     private func openTwitter(appURL: String, webURL: String) {
         if let appURL = URL(string: appURL), UIApplication.shared.canOpenURL(appURL) {
             UIApplication.shared.open(appURL, options: [:], completionHandler: nil)
@@ -63,7 +63,7 @@ public struct WriteReviewRow: View {
     var imageName: String
     var title: String
     var appURL: String
-
+    
     /// A view for making the user write a review of the app on the store.
     /// - Parameters:
     ///   - imageName: The icon for the settings row.
@@ -74,13 +74,13 @@ public struct WriteReviewRow: View {
         self.imageName = imageName
         self.appURL = appURL
     }
-
+    
     public var body: some View {
         SettingsActionRow(imageName: imageName, title: title, action: {
             writeReview(appURL: appURL)
         })
     }
-
+    
     private func writeReview(appURL: String) {
         guard let url = URL(string: appURL) else { return }
         var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
@@ -94,7 +94,7 @@ public struct AppVersionRow: View {
     var imageName: String = "info.circle"
     var title: String = "App version"
     var version: String
-
+    
     /// The row which tells the user the app version of your application
     /// - Parameters:
     ///   - imageName: The icon for the app version row. The default is `info.circle`.
@@ -105,40 +105,48 @@ public struct AppVersionRow: View {
         self.title = title
         self.version = version
     }
-
+    
     public var body: some View {
         HStack(spacing: 8) {
-            Image(systemName: imageName).customIconImage()
+            Image(systemName: imageName)
+                .customIconImage()
+            
             Text(title)
+                .font(type: .poppins, weight: .regular, style: .body)
+            
             Spacer()
-            Text(version).bold()
+            
+            Text(version)
+                .font(type: .poppins, weight: .bold, style: .body)
         }
         .accessibilityElement(children: .combine)
-        .padding(.vertical, 10)
+        .padding(.vertical, 12)
         .settingsBackground()
     }
 }
 
 extension View {
-  func customIconImage() -> some View {
-    self
-      .font(.headline)
-      .frame(minWidth: 25, alignment: .leading)
-      .accessibility(hidden: true)
-  }
-  
-  func settingsBackground(cornerRadius: CGFloat = 16,
-                          innerPadding: CGFloat = 8,
-                          outerBottomPadding: CGFloat = 6) -> some View {
-    self
-      .padding(.horizontal)
-      .padding(.vertical, innerPadding)
-      .background(RoundedRectangle(cornerRadius: cornerRadius,
-                                   style: .continuous)
-                    .fill(Color(.secondarySystemBackground)))
-      .padding(.bottom, outerBottomPadding)
-      .padding(.horizontal)
-  }
+    func customIconImage() -> some View {
+        self
+            .font(.headline)
+            .frame(minWidth: 25, alignment: .leading)
+            .accessibility(hidden: true)
+    }
+    
+    func settingsBackground(cornerRadius: CGFloat = 16, innerPadding: CGFloat = 8, outerBottomPadding: CGFloat = 6) -> some View {
+        let gradient = Gradient(colors: [.accentColor, .accentColor.opacity(0.5)])
+        
+        return self
+            .foregroundColor(.accentColor)
+            .frame(maxWidth: .infinity, alignment: .center)
+            .padding(.horizontal)
+            .padding(.vertical, innerPadding)
+            .contentShape(Rectangle())
+            .overlay(RoundedRectangle(cornerRadius: cornerRadius)
+                        .stroke(LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom), lineWidth: 1))
+            .padding(.bottom, outerBottomPadding)
+            .padding(.horizontal)
+    }
 }
 
 struct CustomImageModifier: ViewModifier {
