@@ -24,7 +24,7 @@ struct ContentView: View {
 
                 WriteReviewRow(appURL: "https://apps.apple.com/us/app/gradient-game/id1479784361")
 
-                TwitterRow(imageName: "textbox", title: "Tweet about it", twitterAppURL: "twitter://user?screen_name=gradientsgame", twitterWebURL: "https://www.twitter.com/gradientsgame")
+                TwitterRow(title: "Tweet about it", twitterAppURL: "twitter://user?screen_name=gradientsgame", twitterWebURL: "https://www.twitter.com/gradientsgame")
 
                 AppVersionRow(version: "0.1.0")
             }

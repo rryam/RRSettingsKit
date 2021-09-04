@@ -36,7 +36,7 @@ public struct TwitterRow: View {
     ///   - title: The title of the settings row.
     ///   - twitterAppURL: The deeplink to directly open in the Twitter app.
     ///   - twitterWebURL: The link to open in the browser if the app is not available.
-    public init(imageName: String, title: String, twitterAppURL: String, twitterWebURL: String) {
+    public init(imageName: String = "textbox", title: String, twitterAppURL: String, twitterWebURL: String) {
         self.title = title
         self.imageName = imageName
         self.twitterAppURL = twitterAppURL
