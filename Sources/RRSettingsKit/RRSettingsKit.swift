@@ -102,16 +102,18 @@ public struct AppVersionRow: View {
     var imageName: String = "info.circle"
     var title: String = "App version"
     var version: String
+    var addOverlay: Bool
     
     /// The row which tells the user the app version of your application
     /// - Parameters:
     ///   - imageName: The icon for the app version row. The default is `info.circle`.
     ///   - title: The tile for the app version row. The default is `App version`.
     ///   - version: The version of your app.
-    public init(imageName: String = "info.circle", title: String = "App version", version: String) {
+    public init(imageName: String = "info.circle", title: String = "App version", version: String, addOverlay: Bool = true) {
         self.imageName = imageName
         self.title = title
         self.version = version
+        self.addOverlay = addOverlay
     }
     
     public var body: some View {
@@ -129,7 +131,7 @@ public struct AppVersionRow: View {
         }
         .accessibilityElement(children: .combine)
         .padding(.vertical, 12)
-        .settingsBackground()
+        .settingsBackground(addOverlay: addOverlay)
     }
 }
 
