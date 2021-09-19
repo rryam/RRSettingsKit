@@ -24,19 +24,21 @@ public struct MailRow: View {
     private var imageName: String
     private var title: String
     private var object: MailRowObject
+    private var addOverlay: Bool
     
     @State private var showMailView = false
     @State private var showFailureAlert = false
     @State private var result: Result<MFMailComposeResult, Error>? = nil
     
-    public init(image: String, title: String, object: MailRowObject) {
+    public init(image: String, title: String, addOverlay: Bool = true, object: MailRowObject) {
         self.imageName = image
         self.title = title
         self.object = object
+        self.addOverlay = addOverlay
     }
     
     public var body: some View {
-        SettingsActionRow(imageName: imageName, title: title) {
+        SettingsActionRow(imageName: imageName, title: title, addOverlay: addOverlay) {
             if MFMailComposeViewController.canSendMail() {
                 showMailView.toggle()
             }  else if let emailURL = createEmailURL(to: object.receiver, subject: object.subject, body: object.body) {
