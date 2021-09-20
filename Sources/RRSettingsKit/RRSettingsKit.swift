@@ -103,7 +103,7 @@ public struct AppVersionRow: View {
     var title: String = "App version"
     var version: String
     var addOverlay: Bool
-    
+     
     /// The row which tells the user the app version of your application
     /// - Parameters:
     ///   - imageName: The icon for the app version row. The default is `info.circle`.
@@ -135,6 +135,38 @@ public struct AppVersionRow: View {
     }
 }
 
+public struct SettingsToggleRow: View {
+    private var imageName: String
+    private var title: String
+    private var addOverlay: Bool
+    @Binding var value: Bool
+    
+    /// A generic settings row which can be customised according to your needs.
+    /// - Parameters:
+    ///   - imageName: The icon for the settings row.
+    ///   - title: The title of the settings row.
+    public init(imageName: String, title: String, value: Binding<Bool>, addOverlay: Bool = true) {
+        self.imageName = imageName
+        self.title = title
+        self.addOverlay = addOverlay
+        self._value = value
+    }
+    
+    public var body: some View {
+        Toggle(isOn: $value) {
+            Image(systemName: imageName)
+                .font(.headline)
+                .frame(minWidth: 25, alignment: .leading)
+                .accessibility(hidden: true)
+            
+            Text(title)
+                .font(type: .poppins, weight: .regular, style: .body)
+        }
+        .padding(.vertical, 12)
+        .toggleStyle(SwitchToggleStyle(tint: .accentColor))
+        .settingsBackground(addOverlay: addOverlay)
+    }
+}
 
 extension View {
     func customIconImage() -> some View {
