@@ -12,7 +12,7 @@ A beautiful settings screen created in SwiftUI. It is based on my [Gradient Game
 - \[ ] Mac compatibility
 
 ## Support
-- iOS 13.0+ / macOS 10.15+ [soon]
+- iOS 15.0+ / macOS 10.15+ [soon]
 
 ## Usage
 
