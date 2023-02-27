@@ -1,0 +1,39 @@
+definitions:
+  triggering:
+    push: &events
+      events:
+        - push
+        - pull_request
+    scripts:
+      - &buildFramework
+        name: Build Framework
+        script: |
+          xcodebuild \
+            -scheme $XCODE_SCHEME \
+            -destination "$DESTINATION" \
+            -skipPackagePluginValidation \
+            clean build
+      - &testFramework
+        name: Test Framework
+        script: |
+          set -o pipefail
+          xcodebuild \
+            -scheme $XCODE_SCHEME \
+            -destination "$DESTINATION" \
+            -skipPackagePluginValidation \
+            test | xcpretty --report junit
+        test_report: build/reports/junit.xml
+workflows:
+  musadorakit:
+    name: MusadoraKit Workflow
+    instance_type: mac_mini_m1
+    environment:
+      xcode: 14.2
+      vars:
+        XCODE_SCHEME: RRSettingsKit
+        DESTINATION: "platform=iOS Simulator,name=iPhone 14"
+    triggering:
+      <<: *events
+    scripts: 
+      - *buildFramework
+      - *testFramework
