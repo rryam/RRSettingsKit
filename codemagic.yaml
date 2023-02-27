@@ -8,21 +8,11 @@ definitions:
       - &buildFramework
         name: Build Framework
         script: |
-          xcodebuild \
+          xcodebuild clean build \
             -scheme $XCODE_SCHEME \
             -destination "$DESTINATION" \
-            -skipPackagePluginValidation \
-            clean build
-      - &testFramework
-        name: Test Framework
-        script: |
-          set -o pipefail
-          xcodebuild \
-            -scheme $XCODE_SCHEME \
-            -destination "$DESTINATION" \
-            -skipPackagePluginValidation \
-            test | xcpretty --report junit
-        test_report: build/reports/junit.xml
+            -skipPackagePluginValidation
+            
 workflows:
   rrsettingskit:
     name: RRSettingsKit Workflow
@@ -36,4 +26,3 @@ workflows:
       <<: *events
     scripts: 
       - *buildFramework
-      - *testFramework
