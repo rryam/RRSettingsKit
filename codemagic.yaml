@@ -24,8 +24,8 @@ definitions:
             test | xcpretty --report junit
         test_report: build/reports/junit.xml
 workflows:
-  musadorakit:
-    name: MusadoraKit Workflow
+  rrsettingskit:
+    name: RRSettingsKit Workflow
     instance_type: mac_mini_m1
     environment:
       xcode: 14.2
