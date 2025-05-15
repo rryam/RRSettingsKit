@@ -2,6 +2,14 @@
 
 A beautiful settings screen created in SwiftUI. It is based on my [Gradient Game!](https://apps.apple.com/app/id1479784361)
 
+## Support
+
+Love this project? Check out my books to explore more of AI and iOS development:
+- [Exploring AI for iOS Development](https://academy.rudrank.com/product/ai)
+- [Exploring AI-Assisted Coding for iOS Development](https://academy.rudrank.com/product/ai-assisted-coding)
+
+Your support helps to keep this project growing!
+
 ## Features
 - \[x] Customisable
 - \[x] iOS compatibility
@@ -11,7 +19,7 @@ A beautiful settings screen created in SwiftUI. It is based on my [Gradient Game
 - \[ ] Hover Effect for iPad
 - \[ ] Mac compatibility
 
-## Support
+## Requirements
 - iOS 15.0+ / macOS 10.15+ [soon]
 
 ## Usage
